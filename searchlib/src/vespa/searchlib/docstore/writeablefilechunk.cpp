@@ -707,7 +707,8 @@ WriteableFileChunk::append(uint64_t serialNum,
     if ( ! _active->hasRoom(len)) {
         flush(false, _serialNum);
     }
-    _serialNum = std::max(_serialNum, serialNum);
+    assert(serialNum >= _serialNum);
+    _serialNum = serialNum;
     _addedBytes += adjustSize(len);
     size_t oldSz(_active->size());
     LidMeta lm = _active->append(lid, buffer, len);
