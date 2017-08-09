@@ -1,4 +1,4 @@
-package com.yahoo.vespa.hosted.node.verification.spec.report;
+package com.yahoo.vespa.hosted.node.verification.commons.report;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yahoo.vespa.hosted.node.verification.commons.report.SpecVerificationReport;
